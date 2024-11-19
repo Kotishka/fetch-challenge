@@ -8,17 +8,9 @@ The fetch challenge was written with node.js and express. It can run through doc
 ```
 docker build -t fetch-challenge .
 ```
-## Local
-```
-npm install
-```
 
 # Running
 ## Docker
 ```
 docker run -p 8000:8000 fetch-challenge
-```
-## Local
-```
-node receipt-processor.js
 ```
