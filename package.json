@@ -1,0 +1,13 @@
+{
+  "name": "fetch-challenge",
+  "title": "Receipt Processor",
+  "version": "1.0.0",
+  "main": "receipt-processor.js",
+  "author": "Yaroslava Boyko",
+  "license": "ISC",
+  "description": "A simple receipt processor",
+  "dependencies": {
+    "express": "^4.21.1",
+    "uuid": "^11.0.3"
+  }
+}
