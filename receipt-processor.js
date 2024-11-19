@@ -78,7 +78,7 @@ app.post('/receipts/process', (req, res) => {
         receipts.push(newReceipt);
         res.status(200).json({ "id": id });
     } catch (error) {
-        res.status(500).json({ error: 'Error processing receipt' });
+        res.status(500).json({ error: 'Error processing receipt: ' + error });
     }
 });
 
@@ -110,6 +110,10 @@ function calculatePoints(receipt) {
 
     // points on item description based on multiple of 3
     for (let i = 0; i < items.length; i++) {
+        if (!items[i].hasOwnProperty("shortDescription") || !items[i].hasOwnProperty("price")) {
+            throw new Error(`Validation failed: Item at index ${i} does not have the required fields.`);
+        }
+
         const description = items[i]["shortDescription"].trim();
         if (description.length % 3 === 0) {
             const price = items[i]["price"]
