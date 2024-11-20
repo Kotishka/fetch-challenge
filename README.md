@@ -1,5 +1,5 @@
 # About
-Solves the fetch challenge by implementing a webservice that processes and calcualtes receipts.
+Solves the fetch challenge by implementing a webservice that processes and calculates receipts.
 
 The fetch challenge was written with node.js and express. It can run through docker or locally with node.js & npm.
 
